@@ -1,22 +1,31 @@
 #include<iostream>
+#include <cmath>
 using namespace std;
+
 
 int main()
 {
-    int max = 101;
-	int t;
+    
+    int t;
+    int h;
+	h=5;
     cin >> t;
-    for(int i = 0; i<t;  i++)
+    for(int i = 0; i<t; i++)
     {
-        int a,count = 10000000;
+        int a,count = 0;
         cin >> a;
         a--;
-        while(a!=0)
+        double shagai;
+        int a1;
+        shagai = a / h;
+        a1=ceil(shagai);
+        
+        while(a1!=0)
         {
-            if(a%2)count++;
-            a>>=1;
+            if(a1%2)count++;
+            a1>>=1;
         }
-        if(count%2)cout << "shine" << endl;
+        if(count%2)cout << "Shine" << endl;
         else cout << "Huuchin" << endl;
     }
     return 0;
